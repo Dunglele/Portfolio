@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import avatarUrl from "../assets/images/my-avatar.png";
 
-const avatarUrl = "assets/images/my-avatar.png";
 const blogImg1 = "https://images.unsplash.com/photo-1728598909887-2d983a8889b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2Rlcm4lMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzc3MTEyODY2fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const blogImg2 = "https://images.unsplash.com/photo-1573867607131-872f83689352?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVSSUyMFVYJTIwZGVzaWduJTIwYmxvZyUyMGFydGljbGV8ZW58MXx8fHwxNzc3MTEyODY3fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const blogImg3 = "https://images.unsplash.com/photo-1757165792338-b4e8a88ae1c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudCUyMGNvZGV8ZW58MXx8fHwxNzc3MTEyODY3fDA&ixlib=rb-4.1.0&q=80&w=1080";
