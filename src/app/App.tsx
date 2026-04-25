@@ -488,11 +488,11 @@ export default function App() {
             </a>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6 md:pb-0 snap-x snap-mandatory scrollbar-hide">
             {projects.map((p, i) => (
               <article
                 key={i}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                className="min-w-[85%] md:min-w-0 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer snap-center"
               >
                 <div className="h-48 overflow-hidden">
                   <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -526,17 +526,17 @@ export default function App() {
           <p className="text-gray-500 max-w-lg mx-auto mb-12" style={{ lineHeight: 1.8 }}>
             Khám phá bộ sưu tập kỹ năng mà đa số mình có là kiến thức trong 4 năm đại học.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-3 md:gap-6 max-w-2xl mx-auto">
             {skillIcons.map((skill, index) => (
-              <div key={index} className="flex flex-col items-center justify-center p-4 bg-white shadow-sm rounded-2xl hover:scale-105 transition-transform duration-300 border border-gray-50 aspect-square">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+              <div key={index} className="flex flex-col items-center justify-center p-2 md:p-4 bg-white shadow-sm rounded-xl md:rounded-2xl hover:scale-105 transition-transform duration-300 border border-gray-50 aspect-square">
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-lg md:rounded-2xl flex items-center justify-center mb-2 md:mb-3 overflow-hidden">
                   {skill.icon && skill.icon !== "#" ? (
                     <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" />
                   ) : (
-                    <span className="text-indigo-400 text-[10px] font-bold uppercase">Dev</span>
+                    <span className="text-indigo-400 text-[8px] md:text-[10px] font-bold uppercase">Dev</span>
                   )}
                 </div>
-                <p className="text-xs md:text-sm font-semibold text-gray-700 text-center px-1 leading-tight">{skill.name}</p>
+                <p className="text-[10px] md:text-sm font-semibold text-gray-700 text-center px-0.5 leading-tight">{skill.name}</p>
               </div>
             ))}
           </div>
@@ -561,11 +561,11 @@ export default function App() {
             </a>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex overflow-x-auto lg:grid lg:grid-cols-3 gap-6 pb-6 lg:pb-0 snap-x snap-mandatory scrollbar-hide">
             {posts.map((p, i) => (
               <article
                 key={i}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                className="min-w-[85%] lg:min-w-0 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer snap-center"
               >
                 <div className="h-48 overflow-hidden">
                   <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
