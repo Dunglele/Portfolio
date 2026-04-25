@@ -1,53 +1,79 @@
-# Portfolio Landing Page - Hồ Sơ Năng Lực Cá Nhân
+# 🌟 Modern Portfolio - Lê Đỗ Quang Dũng
 
-Dự án này là một trang Portfolio hiện đại, chuyên nghiệp được xây dựng nhằm giới thiệu kỹ năng, kinh nghiệm và các dự án cá nhân. Giao diện được chuyển đổi từ thiết kế Figma sang mã nguồn thực tế với sự tối ưu hóa về hiệu năng và trải nghiệm người dùng (UX/UI).
+[![Vercel Deployment](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://portfolio-dunglele.vercel.app/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-## 🚀 Tính năng nổi bật
-
-- **Giao diện Responsive:** Hiển thị hoàn hảo trên mọi thiết bị (Desktop, Tablet, Mobile).
-- **Hiệu ứng mượt mà:** Sử dụng Framer Motion và CSS Animations cho các tương tác người dùng, bao gồm cả hiệu ứng nghiêng 3D cho Avatar.
-- **Thanh điều hướng thông minh:** Hỗ trợ cuộn mượt (Smooth Scrolling) đến các phần tương ứng.
-- **Trình bày Kỹ năng & Công cụ:** Hiển thị trực quan các kỹ năng chuyên môn và công nghệ sử dụng.
-- **Blog & Showcase:** Khu vực trưng bày bài viết và các sản phẩm mẫu chuyên nghiệp.
-- **Form Liên hệ:** Giao diện liên hệ thân thiện, tích hợp sẵn các kênh kết nối mạng xã hội.
-
-## 🛠 Công nghệ sử dụng
-
-Dự án được phát triển dựa trên các công nghệ hiện đại nhất hiện nay:
-
-- **Frontend:** [React.js](https://reactjs.org/) (v18)
-- **Công cụ xây dựng:** [Vite](https://vitejs.dev/)
-- **Ngôn ngữ:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) (v4)
-- **UI Components:** [Radix UI](https://www.radix-ui.com/) & [Shadcn UI](https://ui.shadcn.com/)
-- **Icons:** [Lucide React](https://lucide.dev/) & [MUI Icons](https://mui.com/material-ui/material-icons/)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **Charts:** [Recharts](https://recharts.org/)
-
-## 📦 Hướng dẫn cài đặt
-
-Để chạy dự án này trên môi trường local, hãy làm theo các bước sau:
-
-1. **Cài đặt thư viện:**
-   ```bash
-   npm install
-   ```
-
-2. **Chạy dự án ở chế độ phát triển:**
-   ```bash
-   npm run dev
-   ```
-
-3. **Xây dựng bản chính thức (Production):**
-   ```bash
-   npm run build
-   ```
-
-## 👤 Thông tin báo cáo
-
-- **Người thực hiện:** Lê Đỗ Quang Dũng
-- **Vai trò:** Full-stack Developer / UI UX Designer
-- **Nguồn thiết kế gốc:** [Figma Design](https://www.figma.com/design/uivTdutvqPZ8aiKQOEWzya/Portfolio-landing-page-design)
+Chào mừng bạn đến với dự án **Portfolio Landing Page** - một không gian số chuyên nghiệp, nơi trình bày kỹ năng, kinh nghiệm và các dự án tâm huyết của tôi. Dự án này không chỉ là một hồ sơ năng lực, mà còn là kết quả của việc kết hợp tư duy thiết kế hệ thống (BA) và kỹ thuật lập trình Backend hiện đại.
 
 ---
-© 2026 Lê Đỗ Quang Dũng. Thiết kế và phát triển với ❤️ tại Việt Nam.
+
+## ✨ Điểm nhấn đột phá (Key Features)
+
+### 🎨 Trải nghiệm tương tác sống động
+- **Avatar 3D Tilt:** Hiệu ứng nghiêng theo con trỏ chuột được xử lý mượt mà bằng JavaScript, mang lại cảm giác chân thực và thú vị.
+- **Floating Animations:** Các thẻ trạng thái "Intern" và văn bản quan trọng có hiệu ứng nhấp nhô nhẹ nhàng, thu hút sự chú ý một cách tinh tế.
+- **Pulse Status:** Chỉ báo "Sẵn sàng được nhận làm Intern" với đèn xanh nhấp nháy, khẳng định sự sẵn sàng cho mọi cơ hội mới.
+
+### 📱 Tối ưu hóa tuyệt đối cho Mobile
+- **4x4 Skill Grid:** Lưới kỹ năng được tinh chỉnh để luôn hiển thị 4 cột cân xứng trên điện thoại, icon sắc nét và gọn gàng.
+- **Horizontal Swipe List:** Danh sách **Dự án** và **Blog** trên mobile được chuyển sang dạng vuốt ngang (Carousel) mượt mà với hiệu ứng `snap-center`, giúp người dùng tập trung vào từng nội dung một.
+
+### ⚙️ Tính năng thông minh
+- **Dynamic Contact Form:** Form liên hệ tự động thu thập dữ liệu và khởi tạo `mailto:` với tiêu đề và nội dung được soạn sẵn chuyên nghiệp.
+- **Interactive Projects:** Mỗi dự án là một liên kết thông minh mở trực tiếp đến kho lưu trữ GitHub trong tab mới.
+- **Smooth Navigation:** Hệ thống cuộn mượt đến từng phần của trang web.
+
+---
+
+## 🛠 Công nghệ & Thư viện sử dụng
+
+Dự án được xây dựng trên một ngăn xếp công nghệ hiện đại, đảm bảo tốc độ build cực nhanh và khả năng bảo trì cao:
+
+| Công nghệ | Vai trò |
+| :--- | :--- |
+| **React 18** | Thư viện giao diện chính |
+| **Vite 6** | Công cụ build siêu tốc (Next-gen Frontend Tooling) |
+| **TypeScript** | Đảm bảo kiểu dữ liệu chặt chẽ và giảm thiểu lỗi |
+| **Tailwind CSS 4** | Framework CSS tiện ích cho giao diện hiện đại |
+| **Framer Motion** | Xử lý các chuyển động và animation phức tạp |
+| **Radix UI** | Cung cấp các component nền tảng chuẩn Accessibility |
+| **Lucide React** | Bộ icon dạng vector sắc nét |
+
+---
+
+## 🚀 Hướng dẫn vận hành
+
+### 1. Cài đặt môi trường
+Đảm bảo bạn đã cài đặt Node.js. Sao chép dự án và cài đặt dependencies:
+```bash
+git clone https://github.com/Dunglele/Portfolio.git
+cd Portfolio
+npm install
+```
+
+### 2. Chạy ở chế độ Phát triển
+Khởi động local server với khả năng Hot Module Replacement (HMR):
+```bash
+npm run dev
+```
+
+### 3. Xây dựng bản chính thức
+Build mã nguồn và tối ưu hóa tài nguyên cho Production:
+```bash
+npm run build
+```
+*Lưu ý: Bản build sẽ được xuất ra thư mục `build/` để tương thích hoàn toàn với Vercel.*
+
+---
+
+## 👤 Thông tin báo cáo & Liên hệ
+
+- **Người thực hiện:** **Lê Đỗ Quang Dũng**
+- **Vai trò hiện tại:** Intern Backend Developer | Business Analyst | UI/UX Enthusiast
+- **Email:** [ldqdung@outlook.com](mailto:ldqdung@outlook.com)
+- **Website:** [qdungdev.id.vn](https://qdungdev.id.vn)
+- **GitHub:** [@Dunglele](https://github.com/Dunglele)
+
+---
