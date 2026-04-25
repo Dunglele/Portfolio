@@ -5,9 +5,13 @@ const blogImg1 = "https://images.unsplash.com/photo-1728598909887-2d983a8889b1?c
 const blogImg2 = "https://images.unsplash.com/photo-1573867607131-872f83689352?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVSSUyMFVYJTIwZGVzaWduJTIwYmxvZyUyMGFydGljbGV8ZW58MXx8fHwxNzc3MTEyODY3fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const blogImg3 = "https://images.unsplash.com/photo-1757165792338-b4e8a88ae1c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudCUyMGNvZGV8ZW58MXx8fHwxNzc3MTEyODY3fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const serviceImg = "https://images.unsplash.com/photo-1760386129108-d17b9cdfc4fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5JTIwbG9nbyUyMGRlc2lnbiUyMGNyZWF0aXZlfGVufDF8fHx8MTc3NzAxOTE2OHww&ixlib=rb-4.1.0&q=80&w=1080";
+const github = "https://github.com/Dunglele";
+const linkedin = "https://www.linkedin.com/in/ldqquang-dung/";
+const x = "https://x.com/dungle9386?s=21";
+const instagram = "https://instagram.com/_qdungg.39";
 
 const navItems = [
-  { label: "Công Cụ", href: "#tools" },
+  { label: "Dự án", href: "#project" },
   { label: "Bài Viết", href: "#blog" },
   { label: "Cửa Hàng", href: "#shop" },
   { label: "Liên Lạc", href: "#contact" },
@@ -40,9 +44,9 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
       </svg>
     ),
-    title: "Brand Identity",
-    desc: "Thiết kế logo, bộ nhận diện thương hiệu chuyên nghiệp, sáng tạo và nhất quán.",
-    tag: "Branding",
+    title: "Thiết kế hệ thống",
+    desc: "Thiết kế hệ thống, vẽ các sơ đồ SRS trực quan để chuyển giao cho Dev chuẩn nhất.",
+    tag: "Business Analytics",
   },
   {
     icon: (
@@ -50,9 +54,9 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: "SEO & Tối Ưu",
-    desc: "Tối ưu hóa công cụ tìm kiếm, tăng thứ hạng Google và cải thiện hiệu suất website.",
-    tag: "SEO",
+    title: "Backend Developer",
+    desc: "Thiết kế các chức năng, liên kết Database với FE. Xây dựng API đầy đủ, bảo mật.",
+    tag: "Dev",
   },
 ];
 
@@ -98,6 +102,30 @@ const posts = [
   },
 ];
 
+const projects = [
+  {
+    img: blogImg1,
+    tag: "Model AI",
+    date: "20 Tháng 4, 2026",
+    title: "Deep Learning - Hệ thống phân tích giao thông tại HCMC",
+    desc: "Đưa ra hướng giải quyết vấn đề nan giải của TP.Hồ Chí Minh trong nhiều năm qua, bộ dữ liệu đặc biệt tự train mô hình Yolov11.",
+  },
+  {
+    img: blogImg2,
+    tag: "Ecommerce",
+    date: "12 Tháng 4, 2026",
+    title: "Remake - Cửa hàng thời trang Streetwear 5Theway",
+    desc: "Thiết kế hệ thống, UI/UX cho thương hiệu thời trang 5Theway. Triển khai với công nghệ Springboot & Java, HTML/CSS JS và Bootstrap5.",
+  },
+  {
+    img: blogImg3,
+    tag: "Health",
+    date: "5 Tháng 4, 2026",
+    title: "CaloViet - Ứng dụng cải thiện cân nặng thông minh",
+    desc: "Ứng dụng học sâu trong nhận diện món ăn. Đảm bảo mang lại hiệu quả cho các kế hoạch tăng / giảm cân nặng của người dùng.",
+  },
+];
+
 const tagColors: Record<string, string> = {
   "UI/UX": "bg-violet-100 text-violet-600",
   Mobile: "bg-cyan-100 text-cyan-600",
@@ -105,6 +133,10 @@ const tagColors: Record<string, string> = {
   SEO: "bg-emerald-100 text-emerald-600",
   Design: "bg-indigo-100 text-indigo-600",
   Dev: "bg-orange-100 text-orange-600",
+  "Model AI": "bg-blue-100 text-blue-600",
+  Ecommerce: "bg-amber-100 text-amber-600",
+  Health: "bg-rose-100 text-rose-600",
+  "Business Analytics": "bg-teal-100 text-teal-600",
 };
 
 function SkillBar({ name, level, color }: { name: string; level: number; color: string }) {
@@ -139,6 +171,21 @@ function SkillBar({ name, level, color }: { name: string; level: number; color: 
     </div>
   );
 }
+
+const skillIcons = [
+  { name: ".NET", icon: "https://img.icons8.com/?size=160&id=1hX8jwYkynSh&format=png" },
+  { name: "Springboot", icon: "https://img.icons8.com/?size=96&id=90519&format=png" },
+  { name: "Django", icon: "https://img.icons8.com/?size=100&id=mUBILbYvUMq8&format=png" },
+  { name: "C#", icon: "https://img.icons8.com/?size=128&id=Fycm8TUhWmFU&format=png" },
+  { name: "Python", icon: "https://img.icons8.com/?size=96&id=13441&format=png" },
+  { name: "Java", icon: "https://img.icons8.com/?size=160&id=lTKW3iI3wIT0&format=png" },
+  { name: "Figma", icon: "https://img.icons8.com/?size=96&id=zfHRZ6i1Wg0U&format=png" },
+  { name: "Notion", icon: "https://img.icons8.com/?size=128&id=wue74HqaylSJ&format=png" },
+  { name: "Git", icon: "https://img.icons8.com/?size=96&id=20906&format=png" },
+  { name: "Linux", icon: "https://img.icons8.com/?size=160&id=m6O2bFdG70gw&format=png" },
+  { name: "HTML/CSS", icon: "https://img.icons8.com/?size=96&id=20909&format=png" },
+  { name: "JS", icon: "https://img.icons8.com/?size=96&id=108784&format=png" },
+];
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -222,11 +269,11 @@ export default function App() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-50 rounded-full blur-3xl opacity-30" />
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center relative">
+        <div className="max-w-6xl mx-auto px-6 pt-10 pb-36 md:py-20 grid md:grid-cols-2 gap-16 items-center relative">
           {/* Text */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-600 px-4 py-2 rounded-full text-xs mb-6">
-              <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-600 px-4 py-2 rounded-full text-xs mb-6">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               Sẵn sàng nhận dự án mới
             </div>
             <h1 className="mb-4 text-gray-900" style={{ fontSize: "clamp(2.4rem, 5vw, 3.5rem)", lineHeight: 1.15, fontWeight: 700, letterSpacing: "-0.02em" }}>
@@ -236,7 +283,7 @@ export default function App() {
               </span>
             </h1>
             <p className="text-gray-500 mb-8 max-w-md" style={{ lineHeight: 1.8 }}>
-              Full-stack Developer & UI/UX Designer với hơn 4 năm kinh nghiệm. Mình tạo ra những sản phẩm số đẹp, mượt mà và có ý nghĩa thực sự với người dùng.
+              Intern Backend Developer & BA biết UX/UI Designer với vài năm kinh nghiệm. Mình tạo ra những sản phẩm số đẹp, mượt mà và có ý nghĩa thực sự với người dùng.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">
@@ -264,7 +311,7 @@ export default function App() {
               {[
                 {
                   name: "GitHub",
-                  href: "#",
+                  href: github,
                   icon: (
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
@@ -272,8 +319,8 @@ export default function App() {
                   ),
                 },
                 {
-                  name: "Twitter",
-                  href: "#",
+                  name: "X",
+                  href: x,
                   icon: (
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -282,7 +329,7 @@ export default function App() {
                 },
                 {
                   name: "LinkedIn",
-                  href: "#",
+                  href: linkedin,
                   icon: (
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -290,11 +337,13 @@ export default function App() {
                   ),
                 },
                 {
-                  name: "Dribbble",
-                  href: "#",
+                  name: "Instagram",
+                  href: instagram,
                   icon: (
-                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.logout c.234-.43 3.177-5.48 8.452-7.187.27-.09.54-.17.81-.24-.17-.388-.35-.782-.53-1.17C7.6 11.723 2.7 11.603 2.28 11.595c-.038.13-.05.26-.05.4 0 2.507.952 4.79 2.507 6.494l.003-.044zm-2.396-7.74c.438.01 4.765.108 9.158-1.19C9.35 6.99 7.783 5.08 7.552 4.788c-2.396 1.133-4.22 3.224-4.88 5.76zm7.28-7.07c.264.333 1.856 2.23 3.647 5.112 3.472-1.303 4.934-3.274 5.107-3.52-1.723-1.534-4.0-2.467-6.497-2.467-.77 0-1.52.1-2.258.275z" />
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
                   ),
                 },
@@ -302,6 +351,8 @@ export default function App() {
                 <a
                   key={s.name}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg border border-gray-200 flex items-center justify-center text-gray-500 hover:text-indigo-600 hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-200"
                   title={s.name}
                 >
@@ -339,7 +390,7 @@ export default function App() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400">Kinh nghiệm</p>
-                  <p className="text-sm text-gray-800">4+ năm</p>
+                  <p className="text-sm text-gray-800">0 năm</p>
                 </div>
               </div>
               <div className="absolute -top-4 -right-6 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3 border border-gray-100">
@@ -349,8 +400,8 @@ export default function App() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400">Khách hàng</p>
-                  <p className="text-sm text-gray-800">50+ dự án</p>
+                  <p className="text-xs text-gray-400">Project</p>
+                  <p className="text-sm text-gray-800">15+ dự án</p>
                 </div>
               </div>
             </div>
@@ -419,51 +470,81 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── SKILLS ── */}
-      <section className="py-24 bg-white">
+      {/* ── PROJECT ── */}
+      <section id="project" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-indigo-500 text-xs tracking-widest uppercase mb-3 block">Kỹ năng</span>
-              <h2 className="text-gray-900 mb-4" style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>
-                Bộ kỹ năng của mình
+              <span className="text-indigo-500 text-xs tracking-widest uppercase mb-3 block">Dự án</span>
+              <h2 className="text-gray-900" style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>
+                Các dự án mình đã thực hiện
               </h2>
-              <p className="text-gray-500 mb-10" style={{ lineHeight: 1.8 }}>
-                Mình không ngừng học hỏi và cập nhật các công nghệ mới nhất để mang lại sản phẩm tốt nhất cho khách hàng.
-              </p>
-              {skills.map((s) => (
-                <SkillBar key={s.name} {...s} />
-              ))}
             </div>
+            <a href="#" className="text-indigo-500 text-sm hover:text-indigo-700 transition-colors flex items-center gap-1 shrink-0">
+              Xem tất cả
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
 
-            {/* Tools section */}
-            <div id="tools">
-              <span className="text-violet-500 text-xs tracking-widest uppercase mb-3 block">Công cụ</span>
-              <h2 className="text-gray-900 mb-4" style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>
-                Công cụ mình sử dụng
-              </h2>
-              <p className="text-gray-500 mb-8" style={{ lineHeight: 1.8 }}>
-                Những công cụ giúp mình làm việc hiệu quả và sáng tạo mỗi ngày.
-              </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {tools.map((t, i) => (
-                  <div
-                    key={i}
-                    className="bg-gray-50 rounded-2xl p-4 flex flex-col items-center text-center hover:bg-indigo-50 hover:scale-105 transition-all duration-200 cursor-pointer group border border-transparent hover:border-indigo-100"
-                  >
-                    <span className="text-3xl mb-2">{t.icon}</span>
-                    <span className="text-sm text-gray-800 group-hover:text-indigo-700" style={{ fontWeight: 600 }}>{t.name}</span>
-                    <span className="text-xs text-gray-400 mt-0.5">{t.desc}</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((p, i) => (
+              <article
+                key={i}
+                className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              >
+                <div className="h-48 overflow-hidden">
+                  <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className={`text-xs px-2.5 py-1 rounded-full ${tagColors[p.tag] || "bg-gray-100 text-gray-500"}`}>
+                      {p.tag}
+                    </span>
+                    <span className="text-xs text-gray-400">{p.date}</span>
                   </div>
-                ))}
+                  <h3 className="text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors duration-200" style={{ fontWeight: 600, lineHeight: 1.4 }}>
+                    {p.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm" style={{ lineHeight: 1.7 }}>{p.desc}</p>
+                  
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SKILL ── */}
+      <section id="skill" className="py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <span className="text-indigo-500 text-xs tracking-widest uppercase mb-3 block">Kỹ năng</span>
+          <h2 className="text-gray-900 mb-4" style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>
+            Một ít skill của mình
+          </h2>
+          <p className="text-gray-500 max-w-lg mx-auto mb-12" style={{ lineHeight: 1.8 }}>
+            Khám phá bộ sưu tập kỹ năng mà đa số mình có là kiến thức trong 4 năm đại học.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 max-w-2xl mx-auto">
+            {skillIcons.map((skill, index) => (
+              <div key={index} className="flex flex-col items-center justify-center p-4 bg-white shadow-sm rounded-2xl hover:scale-105 transition-transform duration-300 border border-gray-50 aspect-square">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-3 overflow-hidden">
+                  {skill.icon && skill.icon !== "#" ? (
+                    <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" />
+                  ) : (
+                    <span className="text-indigo-400 text-[10px] font-bold uppercase">Dev</span>
+                  )}
+                </div>
+                <p className="text-xs md:text-sm font-semibold text-gray-700 text-center px-1 leading-tight">{skill.name}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── BLOG ── */}
-      <section id="blog" className="py-24 bg-gray-50">
+      <section id="blog" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <div>
@@ -514,7 +595,7 @@ export default function App() {
       </section>
 
       {/* ── SHOP ── */}
-      <section id="shop" className="py-24 bg-white">
+      <section id="shop" className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <span className="text-indigo-500 text-xs tracking-widest uppercase mb-3 block">Cửa Hàng</span>
           <h2 className="text-gray-900 mb-4" style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.02em" }}>
@@ -530,7 +611,7 @@ export default function App() {
               { name: "SEO Checklist", price: "49.000đ", tag: "🚀", desc: "Checklist SEO đầy đủ cho developer & marketer tối ưu web.", color: "from-emerald-50 to-teal-50", border: "border-emerald-100" },
             ].map((item, i) => (
               <div key={i} className={`rounded-2xl bg-gradient-to-br ${item.color} p-6 border ${item.border} text-left hover:shadow-md transition-all duration-200 hover:-translate-y-1 cursor-pointer group`}>
-                <span className="text-3xl mb-4 block">{item.tag}</span>
+                {/* <span className="text-3xl mb-4 block">{item.tag}</span> */}
                 <h3 className="text-gray-800 mb-2" style={{ fontWeight: 600 }}>{item.name}</h3>
                 <p className="text-gray-500 text-sm mb-4" style={{ lineHeight: 1.7 }}>{item.desc}</p>
                 <div className="flex items-center justify-between">
