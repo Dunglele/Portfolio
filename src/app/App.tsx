@@ -58,7 +58,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: "Backend Developer",
+    title: "Backend",
     desc: "Thiết kế các chức năng, liên kết Database với FE. Xây dựng API đầy đủ, bảo mật.",
     tag: "Dev",
   },
