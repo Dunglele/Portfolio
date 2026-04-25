@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import avatarUrl from "../assets/images/my-avatar.png";
+import project1 from "../assets/images/traffic.jpg";
+import project2 from "../assets/images/5theway.jpg";
+import project3 from "../assets/images/calo.jpg";
+
 
 const blogImg1 = "https://images.unsplash.com/photo-1728598909887-2d983a8889b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2Rlcm4lMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzc3MTEyODY2fDA&ixlib=rb-4.1.0&q=80&w=1080";
 const blogImg2 = "https://images.unsplash.com/photo-1573867607131-872f83689352?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVSSUyMFVYJTIwZGVzaWduJTIwYmxvZyUyMGFydGljbGV8ZW58MXx8fHwxNzc3MTEyODY3fDA&ixlib=rb-4.1.0&q=80&w=1080";
@@ -104,21 +108,24 @@ const posts = [
 
 const projects = [
   {
-    img: blogImg1,
+    img: project1,
+    href: "https://github.com/Dunglele/Model_AITRAFFIC",
     tag: "Model AI",
     date: "20 Tháng 4, 2026",
     title: "Deep Learning - Hệ thống phân tích giao thông tại HCMC",
     desc: "Đưa ra hướng giải quyết vấn đề nan giải của TP.Hồ Chí Minh trong nhiều năm qua, bộ dữ liệu đặc biệt tự train mô hình Yolov11.",
   },
   {
-    img: blogImg2,
+    img: project2,
+    href: "https://github.com/Dunglele/5Theway",
     tag: "Ecommerce",
     date: "12 Tháng 4, 2026",
     title: "Remake - Cửa hàng thời trang Streetwear 5Theway",
     desc: "Thiết kế hệ thống, UI/UX cho thương hiệu thời trang 5Theway. Triển khai với công nghệ Springboot & Java, HTML/CSS JS và Bootstrap5.",
   },
   {
-    img: blogImg3,
+    img: project3,
+    href: "https://github.com/Dunglele",
     tag: "Health",
     date: "5 Tháng 4, 2026",
     title: "CaloViet - Ứng dụng cải thiện cân nặng thông minh",
@@ -190,6 +197,13 @@ const skillIcons = [
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", service: "", message: "" });
+
+  const handleSendEmail = () => {
+    const subject = encodeURIComponent(`Liên hệ từ Portfolio: ${formData.service || "Dự án mới"}`);
+    const body = encodeURIComponent(`Họ tên: ${formData.name}\nEmail: ${formData.email}\nDịch vụ: ${formData.service}\n\nTin nhắn:\n${formData.message}`);
+    window.location.href = `mailto:ldqdung@outlook.com?subject=${subject}&body=${body}`;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -272,9 +286,9 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6 pt-10 pb-36 md:py-20 grid md:grid-cols-2 gap-16 items-center relative">
           {/* Text */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-600 px-4 py-2 rounded-full text-xs mb-6">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-600 px-4 py-2 rounded-full text-xs mb-6 animate-float">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              Sẵn sàng nhận dự án mới
+              Sẵn sàng được nhận làm Intern
             </div>
             <h1 className="mb-4 text-gray-900" style={{ fontSize: "clamp(2.4rem, 5vw, 3.5rem)", lineHeight: 1.15, fontWeight: 700, letterSpacing: "-0.02em" }}>
               Xin chào, mình là<br />
@@ -480,7 +494,7 @@ export default function App() {
                 Các dự án mình đã thực hiện
               </h2>
             </div>
-            <a href="#" className="text-indigo-500 text-sm hover:text-indigo-700 transition-colors flex items-center gap-1 shrink-0">
+            <a href="https://github.com/Dunglele?tab=repositories" target="_blank" className="text-indigo-500 text-sm hover:text-indigo-700 transition-colors flex items-center gap-1 shrink-0">
               Xem tất cả
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -490,9 +504,12 @@ export default function App() {
 
           <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6 md:pb-0 snap-x snap-mandatory scrollbar-hide">
             {projects.map((p, i) => (
-              <article
+              <a
                 key={i}
-                className="min-w-[85%] md:min-w-0 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer snap-center"
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-w-[85%] md:min-w-0 bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer snap-center block"
               >
                 <div className="h-48 overflow-hidden">
                   <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -510,7 +527,7 @@ export default function App() {
                   <p className="text-gray-500 text-sm" style={{ lineHeight: 1.7 }}>{p.desc}</p>
                   
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
@@ -648,6 +665,8 @@ export default function App() {
                 <input
                   type="text"
                   placeholder="Nguyễn Văn A"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-white/10 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm border border-white/10 focus:border-indigo-500 focus:outline-none transition-colors"
                 />
               </div>
@@ -656,18 +675,27 @@ export default function App() {
                 <input
                   type="email"
                   placeholder="email@example.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-white/10 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm border border-white/10 focus:border-indigo-500 focus:outline-none transition-colors"
                 />
               </div>
             </div>
             <div className="mb-4">
-              <label className="text-gray-400 text-xs block mb-1.5">Dịch vụ quan tâm</label>
-              <select className="w-full bg-white/10 text-gray-300 rounded-xl px-4 py-3 text-sm border border-white/10 focus:border-indigo-500 focus:outline-none transition-colors">
-                <option value="" className="bg-gray-900">Chọn dịch vụ...</option>
+              <label className="text-gray-400 text-xs block mb-1.5">Chủ đề quan tâm</label>
+              <select 
+                value={formData.service}
+                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                className="w-full bg-white/10 text-gray-300 rounded-xl px-4 py-3 text-sm border border-white/10 focus:border-indigo-500 focus:outline-none transition-colors"
+              >
+                <option value="" className="bg-gray-900">Chọn chủ đề...</option>
                 <option value="web" className="bg-gray-900">Thiết kế Web</option>
                 <option value="app" className="bg-gray-900">App Di Động</option>
                 <option value="brand" className="bg-gray-900">Brand Identity</option>
                 <option value="seo" className="bg-gray-900">SEO & Tối Ưu</option>
+                <option value="ba" className="bg-gray-900">Thiết kế hệ thống</option>
+                <option value="hr" className="bg-gray-900">Tuyển dụng</option>
+
               </select>
             </div>
             <div className="mb-6">
@@ -675,10 +703,16 @@ export default function App() {
               <textarea
                 rows={4}
                 placeholder="Mô tả dự án của bạn..."
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full bg-white/10 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm border border-white/10 focus:border-indigo-500 focus:outline-none transition-colors resize-none"
               />
             </div>
-            <button className="w-full py-3.5 bg-gradient-to-r from-indigo-500 to-violet-600 text-white rounded-xl text-sm hover:from-indigo-600 hover:to-violet-700 transition-all duration-200 flex items-center justify-center gap-2" style={{ fontWeight: 500 }}>
+            <button 
+              onClick={handleSendEmail}
+              className="w-full py-3.5 bg-gradient-to-r from-indigo-500 to-violet-600 text-white rounded-xl text-sm hover:from-indigo-600 hover:to-violet-700 transition-all duration-200 flex items-center justify-center gap-2" 
+              style={{ fontWeight: 500 }}
+            >
               Gửi tin nhắn
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -706,15 +740,15 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <a href="#" className="flex items-center gap-2 group">
-              <img src={avatarUrl} alt="Logo" className="w-10 h-10 rounded-lg object-cover" />
-              <span className="text-white-900 tracking-tight select-none">qdungdev<span className="text-indigo-500">.</span>id<span className="text-indigo-500">.</span>vn</span>
+              {/* <img src={avatarUrl} alt="Logo" className="w-10 h-10 rounded-lg object-cover" />
+              <span className="text-white-900 tracking-tight select-none">qdungdev<span className="text-indigo-500">.</span>id<span className="text-indigo-500">.</span>vn</span> */}
             </a>
           </div>
           <p className="text-xs text-center">
-            © 2026 Quang Dũng. Thiết kế với React & Tailwind CSS.
+            © 2026 Lê Đỗ Quang Dũng. Portfolio thiết kế với React & Tailwind CSS.
           </p>
           <div className="flex gap-4 text-xs">
-            {navItems.map((n) => (
+            {/* {navItems.map((n) => (
               <button
                 key={n.label}
                 onClick={() => scrollTo(n.href)}
@@ -722,7 +756,7 @@ export default function App() {
               >
                 {n.label}
               </button>
-            ))}
+            ))} */}
           </div>
         </div>
       </footer>
