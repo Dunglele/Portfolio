@@ -6,6 +6,8 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
 Chào mừng bạn đến với dự án **Portfolio Landing Page** - một không gian số chuyên nghiệp, nơi trình bày kỹ năng, kinh nghiệm và các dự án tâm huyết của tôi. Dự án này không chỉ là một hồ sơ năng lực, mà còn là kết quả của việc kết hợp tư duy thiết kế hệ thống (BA) và kỹ thuật lập trình Backend hiện đại.
+<hr />
+<img width="3246" height="1839" alt="image" src="https://github.com/user-attachments/assets/6c2e5de5-3e60-4e81-86be-5704f6dfc9f6" />
 
 ---
 
