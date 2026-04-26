@@ -243,10 +243,10 @@ export default function App() {
               </button>
             ))}
             <button
-              onClick={() => scrollTo("#contact")}
+              onClick={() => scrollTo("#cv")}
               className="ml-3 px-5 py-2 rounded-lg bg-gray-900 text-white text-sm hover:bg-indigo-600 transition-colors duration-200"
             >
-              Thuê tôi →
+              Lấy CV →
             </button>
           </div>
 
