@@ -404,7 +404,7 @@ export default function App() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400">Kinh nghiệm</p>
-                  <p className="text-sm text-gray-800">0 năm</p>
+                  <p className="text-sm text-gray-800">Sẵn sàng học hỏi</p>
                 </div>
               </div>
               <div className="absolute -top-4 -right-6 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3 border border-gray-100">
