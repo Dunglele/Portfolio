@@ -297,7 +297,7 @@ export default function App() {
               </span>
             </h1>
             <p className="text-gray-500 mb-8 max-w-md" style={{ lineHeight: 1.8 }}>
-              Intern Backend Developer & BA biết UX/UI Designer với vài năm kinh nghiệm. Mình tạo ra những sản phẩm số đẹp, mượt mà và có ý nghĩa thực sự với người dùng.
+              Intern Backend Developer & BA biết UX/UI Design với kinh nghiệm & kỹ năng cơ bản. Mình tạo ra những sản phẩm số đẹp, mượt mà và có ý nghĩa thực sự với người dùng.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">
